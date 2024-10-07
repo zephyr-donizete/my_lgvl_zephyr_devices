@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <zephyr/logging/log.h>
+LOG_MODULE_REGISTER(app, LOG_LEVEL_DBG);
+
+#include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/display.h>
-#include <zephyr/drivers/gpio.h>
-#include <lvgl.h>
+
 #include <stdio.h>
 #include <string.h>
-#include <zephyr/kernel.h>
-#include <lvgl_input_device.h>
 
-#include <zephyr/logging/log.h>
-LOG_MODULE_REGISTER(app, LOG_LEVEL_DBG);
+#include <lvgl.h>
 
 int main(void)
 {
