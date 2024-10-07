@@ -15,7 +15,7 @@
 #include <lvgl_input_device.h>
 
 #include <zephyr/logging/log.h>
-LOG_MODULE_REGISTER(app);
+LOG_MODULE_REGISTER(app, LOG_LEVEL_DBG);
 
 int main(void)
 {
@@ -50,5 +50,6 @@ int main(void)
 		lv_task_handler();
 		++count;
 		k_sleep(K_MSEC(10));
+		LOG_DBG("While 1");
 	}
 }
